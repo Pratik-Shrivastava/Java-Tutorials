@@ -53,6 +53,31 @@ The object is created in three steps:
 - ### Instantiation: new
 - ### Initialization: Student()
 
+## Constructors in Java
+
+- A **constructor** is a special method used to initialize objects.
+- It is called when an object of the class is created.
+- If you don't define a constructor, Java provides a default constructor.
+
+### Example of Constructor
+
+```java
+class Student {
+    String name;
+    int roll;
+
+    Student(String name, int roll) {
+        this.name = name;
+        this.roll = roll;
+    }
+
+    void introduce() {
+        System.out.println("Hi, I'm " + name + " and my roll number is " + roll + ".");
+    }
+}
+```
+
+
 
 
 
