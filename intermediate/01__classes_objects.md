@@ -17,7 +17,7 @@ class Student {
 ```
 In the above example:
 
-- The class `Studet` defines two attributes: `name`, and `roll`.
+- The class `Student` defines two attributes: `name`, and `roll`.
 
 
 ## What is an Object?
