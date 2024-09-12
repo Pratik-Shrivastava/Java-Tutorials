@@ -20,4 +20,40 @@ In the above example:
 - The class `Studet` defines two attributes: `name`, and `roll`.
 
 
+## What is an Object?
+
+- An **object** is is an instance of a class. 
+- Once a class is defined, we can create objects from it.
+- Each object has its own values for the attributes defined in the class.
+
+### Syntax of an Object
+
+```java
+class Student {
+    
+    String name;
+    int roll;    
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Student student1 = new Student();
+
+        System.out.println("Student1 name = " + student1.name);
+        System.out.println("Student1 roll = " + student1.roll);        
+
+    }
+}
+```
+## Creation of an Object
+
+The object is created in three steps:
+- ### Decalaration: Student student1
+- ### Instantiation: new
+- ### Initialization: Student()
+
+
+
+
 
