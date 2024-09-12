@@ -13,11 +13,12 @@ A method must be declared within a class and define the following:
 
 ## Example
 ```java
-public class Calculator {
+class Calculator {
 
     // Method declaration
-    public void add() {
-        
+    int add(int a, int b) {
+
+        return a + b;        
     }
 }
 ```
@@ -27,13 +28,13 @@ The method signature consists of the **method name** and **parameter list**. It 
 
 ## Example
 ```java
-public class Printer {
+class Printer {
     
-    public void printMessage(String message) {
+    void printMessage(String message) {
         System.out.println(message);
     }
     
-    public void displayMessage(String message) {
+    void displayMessage(String message) {
         System.out.println(message);
     }
 
@@ -46,10 +47,10 @@ The return statement is used to exit a method and optionally pass a value back t
 
 ## Example
 ```java
-public class SquareCalculator {
+class SquareCalculator {
 
     // Returns the square of a number
-    public int square(int number) {
+    int square(int number) {
 
         return number * number;  // Return result
     }
@@ -61,26 +62,26 @@ public class SquareCalculator {
 - The method called depends on the **number** and **type** of arguments passed.
 
 ```java
-public class Display {
+class Display {
     // Method overloading: same method name with different parameters
 
     // 1. Number of parameters is different
 
-    public int sum(int num1, int num2) {
+    int sum(int num1, int num2) {
         return num1 + num2;
     }
 
-    public int sum(int num1, int num2, int num3) {
+    int sum(int num1, int num2, int num3) {
         return num1 + num2 + num3;
     }
 
     // 2. Type of parameter is different.
 
-    public void print(String name) {
+    void print(String name) {
         System.out.println("My name is " + name);
     }
 
-    public void print(int roll) {
+    void print(int roll) {
         System.out.println("My roll is " + roll);
     }
 
@@ -94,14 +95,14 @@ public class Display {
 
 ## Example
 ```java
-public class MathOperations {
+class MathOperations {
     // Static method
-    public static int add(int a, int b) {
+    static int add(int a, int b) {
         return a + b;
     }
 
     // Instance method
-    public int multiply(int a, int b) {
+    int multiply(int a, int b) {
         return a * b;
     }
 }
@@ -115,17 +116,17 @@ Parameters allow methods to accept data. There are two types:
 ## Example
 
 ```java
-public class Person {
+class Person {
 
     // Pass by value (for primitive types)
 
-    public void changeValue(int age) {
+    void changeValue(int age) {
         age = 30;  // Not affect the original variable
     }
 
     // Pass by reference (for objects)
 
-    public void updateName(Person person) {
+    void updateName(Person person) {
         person.name = "John";  // Affect the original object
     }
 }
@@ -137,9 +138,9 @@ A method with a return type of `void` does not return any value. It is used for 
 
 ## Example
 ```java
-public class Logger {
+class Logger {
     // Void method performs an action without returning any value
-    public void logMessage(String message) {
+    void logMessage(String message) {
         System.out.println("Log: " + message);
     }
 }
@@ -150,10 +151,10 @@ A method can call itself to perform a recursive task. Recursion is often used to
 
 ## Example
 ```java
-public class FactorialCalculator {
+class FactorialCalculator {
     // Recursive method to calculate factorial
-    
-    public int factorial(int n) {
+
+    int factorial(int n) {
         if (n == 1) {
             return 1;  // Base case
         }
